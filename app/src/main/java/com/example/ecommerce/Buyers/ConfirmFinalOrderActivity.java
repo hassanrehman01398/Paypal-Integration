@@ -95,7 +95,6 @@ private String TAG="CHECKING";
             @Override
             public void onClick(View view)
             {
-                Check();
                 OnBuyClicked();
             }
         });
@@ -269,6 +268,8 @@ Log.d("sub_total",subtotal.toString());
                         verifyPaymentOnServer(payment_id , confirm);
 
                         displayResultText("PaymentConfirmation info received from PayPal");
+
+                        Check();
 
                     } catch (JSONException e) {
                         Log.e(TAG, "an extremely unlikely failure occurred: ", e);
